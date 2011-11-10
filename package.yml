@@ -1,5 +1,12 @@
-debianize:
+ fpm_app: 
+  name: Septober (in YAML)
   version: 1.2.3
-  description: This is about 
+  headline: |
+    Yet another LDAP Application, with simplicity kept in mind.
+    # Procrastinators unite.. tomorrow! (op. cit.)
+  copyright: Copyright 2011-11 A few rights reserved (see LICENSE)
+  description: This is about LDAP custom app
+  email: riccardo.carlesso@YML.gmail.com
+  author_name: 'Riccardo "78YML" Carlesso'
   dependencies: [ ruby , openldap, ldaputils ]
-  
+  gems: [ ric, test, gems ]
