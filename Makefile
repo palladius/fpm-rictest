@@ -3,7 +3,8 @@
 NAME=provaric
 VERSION=1.2.3-p456
 #MAJOR_VERSION=1.9
-ARCHITECTURE=x86
+#ARCHITECTURE=x86
+ARCHITECTURE=amd64
 TARDIR=$(NAME)-$(VERSION)
 TARBALL=$(TARDIR).tar.gz
 #DOWNLOAD=http://ftp.ruby-lang.org/pub/ruby/$(MAJOR_VERSION)/$(TARBALL)
@@ -11,7 +12,7 @@ TARBALL=$(TARDIR).tar.gz
 PREFIX=/opt/riccardo
 
 PACKAGE_NAME=ldap-ric-piotr
-PACKAGE_VERSION=0.0.42
+PACKAGE_VERSION=0.0.44
 
 .PHONY: default
 default: deb
@@ -39,6 +40,6 @@ $(TARDIR): $(TARBALL)
 #deb: $(TARDIR)
 #	$(PREFIX)/bin/fpm -s dir -t deb -v $(PACKAGE_VERSION) -n $(PACKAGE_NAME) -a $(ARCHITECTURE) -C $(PREFIX) .
 deb: $(TARDIR)
-	$(PREFIX)/bin/fpm -s dir -t deb -v $(PACKAGE_VERSION) -n $(PACKAGE_NAME) -a any -C $(PREFIX) .
+	$(PREFIX)/bin/fpm -s dir -t deb -v $(PACKAGE_VERSION) -n $(PACKAGE_NAME) -a all -C $(PREFIX) .
 
 
