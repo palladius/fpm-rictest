@@ -12,7 +12,7 @@ TARBALL=$(TARDIR).tar.gz
 PREFIX=/opt/riccardo
 
 PACKAGE_NAME=ldap-ric-piotr
-PACKAGE_VERSION=0.0.44
+PACKAGE_VERSION=0.0.45
 
 .PHONY: default
 default: deb
