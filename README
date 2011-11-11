@@ -1,4 +1,13 @@
-i
 
-my fgirst example with gem 'fpm'
+my first example with gem 'fpm'
+
+
+= INSTALL =
+
+make
+
+
+= Credits =
+
+Thanks to aturli for pointing out this gem!
 

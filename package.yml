@@ -1,9 +1,10 @@
- fpm_app: 
-  name: Septober (in YAML)
+# This is going to take place of the Makefile parameters ina rubyier way!
+fpm_app: 
+  name: Package name
   version: 1.2.3
   headline: |
-    Yet another LDAP Application, with simplicity kept in mind.
-    # Procrastinators unite.. tomorrow! (op. cit.)
+    Yet another Debian distro made from scratch using a ruby gem
+    which I like so much!
   copyright: Copyright 2011-11 A few rights reserved (see LICENSE)
   description: This is about LDAP custom app
   email: riccardo.carlesso@YML.gmail.com
