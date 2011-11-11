@@ -1,8 +1,19 @@
 
-my first example with gem 'fpm'
+Hi, this is my first example with gem 'fpm'.
+
+It allows you to deploy a tar.gz as a debian package (or RPM!)
+
+I guess this is probably overkill because I start from sources, but...
+
+It's ok.
 
 
 = INSTALL =
+
+Prerequisites:
+
+  sudo apt-get install ruby-full
+	gem install fpm
 
 To build:
 

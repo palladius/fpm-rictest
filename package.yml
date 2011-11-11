@@ -1,13 +1,13 @@
 # This is going to take place of the Makefile parameters ina rubyier way!
-fpm_app: 
-  name: Package name
-  version: 1.2.3
-  headline: |
+# # At the moment, its just an idea!
+fpm_ric: 
+  name: fpm-rictest
+  version: 0.0.42
+  description: |
     Yet another Debian distro made from scratch using a ruby gem
     which I like so much!
   copyright: Copyright 2011-11 A few rights reserved (see LICENSE)
-  description: This is about LDAP custom app
-  email: riccardo.carlesso@YML.gmail.com
-  author_name: 'Riccardo "78YML" Carlesso'
-  dependencies: [ ruby , openldap, ldaputils ]
-  gems: [ ric, test, gems ]
+  email: riccardo.carlesso@gmail.com
+  author_name: 'Riccardo "Palladius" Carlesso'
+  dependencies: [ ruby , cowsay, ldaputils ]
+#  gems: [ fpm, test, gems ]
