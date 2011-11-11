@@ -1,13 +1,13 @@
-NAME=provaric
-VERSION=1.2.3-p456
+SRC_NAME=src-packetized
+VERSION=1.0.2
+PACKAGE_NAME=fpm-rictest
+PACKAGE_VERSION=0.0.4
 ARCHITECTURE=all
-TARDIR=$(NAME)-$(VERSION)
+TARDIR=$(SRC_NAME)-$(VERSION)
 TARBALL=$(TARDIR).tar.gz
 DESCRIPTION=This is my first Debian package on Github. Lets celebrate!
 PREFIX=/opt/riccardo
 
-PACKAGE_NAME=fpm-rictest
-PACKAGE_VERSION=0.0.1
 
 .PHONY: default
 default: deb
@@ -29,7 +29,10 @@ $(TARDIR): $(TARBALL)
 
 .PHONY: deb
 deb: $(TARDIR)
-	$(PREFIX)/bin/fpm -s dir -t deb -v $(PACKAGE_VERSION) -n $(PACKAGE_NAME) -a $(ARCHITECTURE) -C $(PREFIX) --description "$(DESCRIPTION)" .
+	$(PREFIX)/bin/fpm -s dir -t deb -v $(PACKAGE_VERSION) -n $(PACKAGE_NAME) \
+			--deb-pre-depends "cowsay" \
+			-a $(ARCHITECTURE) -C $(PREFIX) \
+			--description "$(DESCRIPTION)" .
 
 installa: deb
 	sudo dpkg -i $(PACKAGE_NAME)_$(PACKAGE_VERSION)_$(ARCHITECTURE).deb

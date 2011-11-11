@@ -4,8 +4,13 @@ my first example with gem 'fpm'
 
 = INSTALL =
 
-make
+To build:
 
+  make
+
+To install:
+
+  make installa
 
 = Credits =
 
